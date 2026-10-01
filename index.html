@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
-<!-- Pink My Melody cursor -->
+
 <link rel="stylesheet" href="https://cdn.cursors-4u.net/cursors/animated/pink-my-melody-b5f98ca2-50.css">
 
 <head>
@@ -9,366 +10,440 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Website</title>
 
-    <style>
-
-        /* =========================
-           BACKGROUND
-        ========================= */
-
-        body {
-            background-image: url('https://sirennnnnnnnnnnnnnnnnn.github.io/my-website/background.jpg');
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
-
-            margin: 0;
-            min-height: 100vh;
-
-            font-family: "Courier New", monospace;
-            color: #633047;
-        }
+```
+<style>
 
 
-        /* =========================
-           MAIN PANELS
-        ========================= */
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('https://sirennnnnnnnnnnnnnnnnn.github.io/my-website/background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+
+        margin: 0;
+        min-height: 100vh;
+
+        font-family: "Courier New", monospace;
+        color: #633047;
+    }
+
+
+
+
+    .panel {
+        position: relative;
+        overflow: hidden;
+
+        width: 80%;
+        max-width: 900px;
+
+        margin: 35px auto;
+        padding: 25px;
+
+        background: #fff0f7;
+
+        border: 2px solid #633047;
+
+        box-shadow:
+            5px 5px 0 #e8bfd2,
+            8px 8px 0 #633047;
+    }
+
+
+    /* Decorative dashed circle */
+
+    .panel::after {
+        content: "";
+
+        position: absolute;
+
+        width: 140px;
+        height: 140px;
+
+        border: 2px dashed #edb6ce;
+        border-radius: 50%;
+
+        top: -90px;
+        right: -30px;
+
+        pointer-events: none;
+    }
+    
+    /* Smaller side panel */
+    .Sidepanel {
+        width: 220px;
+        margin: 0;
+        padding: 20px;
+
+        background: #fff0f7;
+        border: 2px solid #633047;
+
+        box-shadow:
+            5px 5px 0 #e8bfd2,
+            8px 8px 0 #633047;
+
+        box-sizing: border-box;
+    }
+
+
+
+
+    header {
+        text-align: center;
+    }
+
+    header h1 {
+        color: #8f3f63;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        color: #b9537d;
+    }
+
+
+
+
+    nav ul {
+        list-style: none;
+
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        display: block;
+
+        padding: 8px 14px;
+
+        color: #633047;
+        background: #fff7fb;
+
+        border: 1px solid #633047;
+
+        text-decoration: none;
+
+        box-shadow: 3px 3px 0 #e5b8cc;
+
+        transition: 0.15s;
+    }
+
+    nav a:hover {
+        background: #f8d7e6;
+
+        transform: translate(2px, 2px);
+
+        box-shadow: 1px 1px 0 #e5b8cc;
+    }
+
+
+
+
+    main {
+        padding-bottom: 10px;
+    }
+
+    section h2 {
+        color: #b9537d;
+
+        margin-top: 0;
+
+        border-bottom: 1px dashed #d99ab5;
+
+        padding-bottom: 8px;
+    }
+
+    section p {
+        line-height: 1.6;
+    }
+    
+    .pronouns {
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .pink {
+        color: #F7A8B8;
+    }
+
+    .blue {
+        color: #5BCEFA;
+    }
+
+    .white {
+        color: #FFFFFF;
+    }
+
+    .slash {
+        color: #F7A8B8;
+    }
+
+
+
+    section img {
+        max-width: 200px;
+
+        border: 2px solid #633047;
+
+        box-shadow: 4px 4px 0 #e5b8cc;
+    }
+
+
+
+
+    section ul {
+        line-height: 1.8;
+    }
+
+    section li::marker {
+        color: #c45c88;
+    }
+
+
+
+    footer {
+        text-align: center;
+
+        font-size: 13px;
+        color: #8f5570;
+    }
+
+
+
+
+    .sparkle {
+        color: #d58baa;
+        font-size: 18px;
+        letter-spacing: 5px;
+    }
+    
+
+
+    
+    .about-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+
+    .about-text {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .about-text p {
+        margin-top: 0;
+        line-height: 1.8;
+    }
+
+
+
+
+    @media (max-width: 600px) {
 
         .panel {
-            position: relative;
-            overflow: hidden;
-
-            width: 80%;
-            max-width: 900px;
-
-            margin: 35px auto;
-            padding: 25px;
-
-            background: #fff0f7;
-
-            border: 2px solid #633047;
-
-            /* cute offset shadow */
-            box-shadow:
-                5px 5px 0 #e8bfd2,
-                8px 8px 0 #633047;
-        }
-
-
-        /* Decorative dashed circle */
-
-        .panel::after {
-            content: "";
-
-            position: absolute;
-
-            width: 140px;
-            height: 140px;
-
-            border: 2px dashed #edb6ce;
-            border-radius: 50%;
-
-            top: -90px;
-            right: -30px;
-
-            pointer-events: none;
-        }
-
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            text-align: center;
+            width: 75%;
+            padding: 20px;
         }
 
         header h1 {
-            color: #8f3f63;
-            margin-top: 0;
-            margin-bottom: 10px;
+            font-size: 25px;
         }
-
-        header p {
-            color: #b9537d;
-        }
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
 
         nav ul {
-            list-style: none;
-
-            padding: 0;
-            margin: 0;
-
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        nav li {
-            margin: 0;
+            flex-direction: column;
+            align-items: center;
         }
 
         nav a {
-            display: block;
-
-            padding: 8px 14px;
-
-            color: #633047;
-            background: #fff7fb;
-
-            border: 1px solid #633047;
-
-            text-decoration: none;
-
-            box-shadow: 3px 3px 0 #e5b8cc;
-
-            transition: 0.15s;
-        }
-
-        nav a:hover {
-            background: #f8d7e6;
-
-            transform: translate(2px, 2px);
-
-            box-shadow: 1px 1px 0 #e5b8cc;
-        }
-
-
-        /* =========================
-           MAIN CONTENT
-        ========================= */
-
-        main {
-            padding-bottom: 10px;
-        }
-
-        section h2 {
-            color: #b9537d;
-
-            margin-top: 0;
-
-            border-bottom: 1px dashed #d99ab5;
-
-            padding-bottom: 8px;
-        }
-
-        section p {
-            line-height: 1.6;
-        }
-
-
-        /* =========================
-           IMAGE
-        ========================= */
-
-        section img {
-            max-width: 200px;
-
-            border: 2px solid #633047;
-
-            box-shadow: 4px 4px 0 #e5b8cc;
-        }
-
-
-        /* =========================
-           LIST
-        ========================= */
-
-        section ul {
-            line-height: 1.8;
-        }
-
-        section li::marker {
-            color: #c45c88;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
+            width: 120px;
             text-align: center;
-
-            font-size: 13px;
-            color: #8f5570;
         }
+    }
 
+</style>
+```
 
-        /* =========================
-           LITTLE DECORATIONS
-        ========================= */
-
-        .sparkle {
-            color: #d58baa;
-            font-size: 18px;
-            letter-spacing: 5px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 600px) {
-
-            .panel {
-                width: 75%;
-                padding: 20px;
-            }
-
-            header h1 {
-                font-size: 25px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav a {
-                width: 120px;
-                text-align: center;
-            }
-        }
-
-    </style>
 </head>
-
 
 <body>
 
+```
 
-    <!-- =========================
-         HEADER PANEL
-    ========================= -->
 
-    <header class="panel">
+<header class="panel" id="top">
 
-        <div class="sparkle">
-            ♡ ✧ ♡ 🎀 ✧ ♡
-        </div>
+    <div class="sparkle">
+        ♡ ✧ ♡ 🎀 ✧ ♡
+    </div>
 
-        <h1>𝓼𝓲𝓻𝓮𝓷'𝓼 𝔀𝓮𝓫𝓼𝓲𝓽𝓮!!!</h1>
+    <h1>𝓼𝓲𝓻𝓮𝓷'𝓼 𝔀𝓮𝓫𝓼𝓲𝓽𝓮!!!</h1>
 
-        <p>
-            welcome to my little corner of the internet ♡
+    <p>
+        welcome!! ♡
+    </p>
+
+    <div class="sparkle">
+        ✧ ˚₊‧ ♡ ‧₊˚ ✧
+    </div>
+
+</header>
+
+
+
+
+
+<nav class="panel">
+
+    <ul>
+
+        <li>
+            <a href="#top">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#services">Services</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+
+<main>
+
+
+
+
+    <section class="panel" id="about">
+
+        <h2>About Me</h2>
+
+        <img
+            src="https://sirennnnnnnnnnnnnnnnnn.github.io/my-website/pfp.jpg"
+            alt="Placeholder Image"
+        >
+
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDlFcGCqTy6xn4VD7bm5DA9iyA85CwcCX7ju_CxPcAJA&s"
+            alt="Placeholder Image"
+        >
+
+        <p class="pronouns">
+            <span class="pink">s</span><span class="blue">h</span><span class="white">e</span>
+            <span class="slash"> / </span>
+            <span class="blue">h</span><span class="white">e</span><span class="pink">r</span>
         </p>
 
-        <div class="sparkle">
-            ✧ ˚₊‧ ♡ ‧₊˚ ✧
-        </div>
+        <p>
+            .........................................................................
+        </p>
 
-    </header>
+        <div class="about-text">
 
-
-
-    <!-- =========================
-         NAVIGATION PANEL
-    ========================= -->
-
-    <nav class="panel">
-
-        <ul>
-
-            <li>
-                <a href="#">Home</a>
-            </li>
-
-            <li>
-                <a href="#">About</a>
-            </li>
-
-            <li>
-                <a href="#">Services</a>
-            </li>
-
-            <li>
-                <a href="#">Contact</a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-
-
-    <!-- =========================
-         MAIN CONTENT
-    ========================= -->
-
-    <main>
-
-        <section class="panel">
-
-            <h2>About This Page</h2>
+            <p>hiiii!! i'm siren</p>
 
             <p>
-                This is a paragraph of text. HTML provides the
-                structure of a webpage, while CSS handles the
-                styling (colors, fonts, layout).
+                i like making websites and games, drawing, and listening to music ♡
             </p>
+
+        </div>
+
+        <aside class="Sidepanel">
+
+            <h2>Favorites</h2>
+
+            <p>Music Artists</p>
+
+            <ul>
+                <li>Overtonight</li>
+                <li>DuskyDemise</li>
+                <li>ZombieWebz</li>
+            </ul>
+
+            <p>Youtubers</p>
+
+            <ul>
+                <li>SMii7y</li>
+                <li>SocksFor1</li>
+                <li>Loppezz</li>
+            </ul>
 
             <p class="sparkle">
                 ♡ ✧ 🌷 ✧ ♡
             </p>
 
-        </section>
+        </aside>
+
+    </section>
 
 
 
-        <section class="panel">
 
-            <h2>Useful Elements</h2>
+    <section class="panel" id="services">
 
-            <p>
-                Here is an example of an image and a list:
-            </p>
-
-
-            <img
-                src="https://sirennnnnnnnnnnnnnnnnn.github.io/my-website/pfp.jpg"
-                alt="Placeholder Image"
-            >
-
-
-            <ul>
-
-                <li>First list item</li>
-
-                <li>Second list item</li>
-
-                <li>Third list item</li>
-
-            </ul>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =========================
-         FOOTER PANEL
-    ========================= -->
-
-    <footer class="panel">
+        <h2>Services</h2>
 
         <p>
-            ♡ thanks for visiting ♡
+            I'd like to start doing commisions although i'm not very good, I don't have any set prices so we can negotiate (CLOSED FOR NOW)
         </p>
+
+    </section>
+
+
+    
+
+    <section class="panel" id="contact">
+
+        <h2>Contact Me</h2>
 
         <p>
-            &copy; 2026 My Website. All rights reserved.
+            @sirenhead3846_ on discord
         </p>
 
-    </footer>
+    </section>
 
+</main>
+
+
+
+
+
+<footer class="panel">
+
+    <p>
+        ♡ thanks for visiting ♡
+    </p>
+
+</footer>
+```
 
 </body>
 </html>
